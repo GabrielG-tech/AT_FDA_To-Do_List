@@ -20,6 +20,7 @@ class TarefaAdapter : ListAdapter<
             binding.tvNomeTarefa.text = item.nomeTarefa
             if (item.check == true) {
                 binding.tvCheckbox.text = "Feito"
+                // binding.tvCheckbox.setBackgroundColor(008800) = "#008800"  mudar cor fundo
             }
         }
 

@@ -36,6 +36,7 @@ class TarefasNaoFeitasFragment : Fragment() {
 
     private fun setup() {
         setupRecyclerView()
+        setupObservers()
     }
 
     override fun onDestroyView() {
@@ -47,12 +48,20 @@ class TarefasNaoFeitasFragment : Fragment() {
 
     private fun setupRecyclerView() {
         binding.rvTarefasNaoFeitas.adapter = adapter
-        binding.rvTarefasNaoFeitas.layoutManager = GridLayoutManager(
+        binding.rvTarefasNaoFeitas.layoutManager = LinearLayoutManager(
             requireContext(),
-            3,
             LinearLayoutManager.VERTICAL,
             false
         )
+    }
+
+    fun setupObservers(){
+        viewModel.listaTarefa.observe(viewLifecycleOwner){
+            adapter.submitList(
+                viewModel.getListaNaoFeitas()
+            )
+            binding.rvTarefasNaoFeitas.adapter  = adapter
+        }
     }
 
 }

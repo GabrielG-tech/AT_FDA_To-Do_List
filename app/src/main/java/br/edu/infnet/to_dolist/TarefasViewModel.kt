@@ -19,5 +19,17 @@ class TarefasViewModel: ViewModel() {
     val listaTarefa: LiveData<List<Tarefa>> = _listaTarefas
 
 
+    fun getListaFeitas(): List<Tarefa> {
+        return listaTarefa.value!!.filter {
+            it.check == true
+        }
+    }
+
+    fun getListaNaoFeitas(): List<Tarefa> {
+        return listaTarefa.value!!.filter {
+            it.check == false
+        }
+    }
+
 
 }
