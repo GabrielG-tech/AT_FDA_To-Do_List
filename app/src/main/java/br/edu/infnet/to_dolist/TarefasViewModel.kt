@@ -31,5 +31,38 @@ class TarefasViewModel: ViewModel() {
         }
     }
 
+    private val _tarefaCompartilhada = MutableLiveData<String>("")
+
+    val tarefaCompartilhada: LiveData<String> = _tarefaCompartilhada
+
+
+    fun setTarefaCompartilhada(value: String) {
+        _tarefaCompartilhada.postValue(value)
+    }
+
+
+    fun listaParaTexto(lista: List<Tarefa>) : String {
+        var texto = ""
+        lista.forEach {
+            texto+= "${it.nomeTarefa} - ${it.check}\n"
+        }
+        return texto
+    }
+
+    fun compartilhaTodasTarefas(){
+        val texto = listaParaTexto(listaTarefa.value!!)
+        setTarefaCompartilhada(texto)
+    }
+
+    fun compartilhaTarefasFeitas(){
+        val texto = listaParaTexto(getListaFeitas())
+        setTarefaCompartilhada(texto)
+    }
+
+    fun compartilhaTarefasNaoFeitas(){
+        val texto = listaParaTexto(getListaNaoFeitas())
+        setTarefaCompartilhada(texto)
+    }
+
 
 }

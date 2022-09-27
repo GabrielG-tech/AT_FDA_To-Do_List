@@ -26,11 +26,24 @@ class CompartilharFragment : Fragment() {
         _binding = FragmentCompartilharBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
+        setupClickListeners()
 
         return view
     }
 
+    private fun setupClickListeners() {
+        binding.apply{
+            btnTodasTarefas.setOnClickListener {
+                viewModel.compartilhaTodasTarefas()
+            }
+            btnNaoFeitas.setOnClickListener {
+                viewModel.compartilhaTarefasNaoFeitas()
+            }
+            btnFeitas.setOnClickListener {
+                viewModel.compartilhaTarefasFeitas()
+            }
+        }
+    }
 
 
     override fun onDestroyView() {
