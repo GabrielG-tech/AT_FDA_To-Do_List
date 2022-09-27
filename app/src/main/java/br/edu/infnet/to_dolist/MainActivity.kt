@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
         // variavel do navHost
         val navHostFragment = supportFragmentManager.findFragmentById (R.id.nav_host_fragment) as NavHostFragment
         // variável de fluxo de navegação
