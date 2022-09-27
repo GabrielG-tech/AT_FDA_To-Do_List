@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import br.edu.infnet.to_dolist.R
 
-
 class TarefasNaoFeitasFragment : Fragment() {
 
     override fun onCreateView(

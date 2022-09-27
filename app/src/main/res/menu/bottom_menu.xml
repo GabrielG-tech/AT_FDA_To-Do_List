@@ -4,21 +4,21 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:title="tarefas" />
+        android:title="Tarefas" />
 
     <item
-        android:id="@+id/nav_repetidas"
+        android:id="@+id/nav_feitas"
         android:icon="@drawable/ic_feitas"
-        android:title="não feitas" />
+        android:title="Não feitas" />
 
     <item
-        android:id="@+id/nav_faltantes"
+        android:id="@+id/nav_nao_feitas"
         android:icon="@drawable/ic_nao_feitas"
-        android:title="feitas" />
+        android:title="Feitas" />
 
     <item
         android:id="@+id/nav_compartilhar"
         android:icon="@drawable/ic_compartilhar"
-        android:title="compartilhar" />
+        android:title="Compartilhar" />
 
 </menu>
