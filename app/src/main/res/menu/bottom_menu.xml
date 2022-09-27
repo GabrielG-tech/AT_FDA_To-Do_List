@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="tarefas" />
+
+    <item
+        android:id="@+id/nav_repetidas"
+        android:icon="@drawable/ic_feitas"
+        android:title="não feitas" />
+
+    <item
+        android:id="@+id/nav_faltantes"
+        android:icon="@drawable/ic_nao_feitas"
+        android:title="feitas" />
+
+    <item
+        android:id="@+id/nav_compartilhar"
+        android:icon="@drawable/ic_compartilhar"
+        android:title="compartilhar" />
+
+</menu>

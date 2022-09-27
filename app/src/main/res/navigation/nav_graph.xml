@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.edu.infnet.to_dolist.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/tarefasNaoFeitasFragment"
+        android:name="br.edu.infnet.to_dolist.fragments.TarefasNaoFeitasFragment"
+        android:label="fragment_tarefas_nao_feitas"
+        tools:layout="@layout/fragment_tarefas_nao_feitas" />
+    <fragment
+        android:id="@+id/tarefasFeitasFragment"
+        android:name="br.edu.infnet.to_dolist.fragments.TarefasFeitasFragment"
+        android:label="fragment_tarefas_feitas"
+        tools:layout="@layout/fragment_tarefas_feitas" />
+    <fragment
+        android:id="@+id/compartilharFragment"
+        android:name="br.edu.infnet.to_dolist.fragments.CompartilharFragment"
+        android:label="fragment_compartilhar"
+        tools:layout="@layout/fragment_compartilhar" />
+</navigation>
