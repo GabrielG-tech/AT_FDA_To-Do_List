@@ -21,16 +21,21 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        appBarConfig()
 
-        // variavel do navHost
-        val navHostFragment = supportFragmentManager.findFragmentById (R.id.nav_host_fragment) as NavHostFragment
-        // variável de fluxo de navegação
+    }
+
+
+    fun appBarConfig() {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+
         val navController = navHostFragment.navController
 
-        // inicializado com os ícones das telas
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_feitas, R.id.nav_nao_feitas, R.id.nav_compartilhar)
+                R.id.nav_home, R.id.nav_nao_feitas, R.id.nav_feitas, R.id.nav_compartilhar
+            )
         )
         // vinculando o appBar com o navHost
         setupActionBarWithNavController(navController, appBarConfiguration)

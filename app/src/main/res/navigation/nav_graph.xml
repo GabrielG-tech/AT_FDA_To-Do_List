@@ -4,25 +4,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/nav_home">
 
     <fragment
-        android:id="@+id/homeFragment"
+        android:id="@+id/nav_home"
         android:name="br.edu.infnet.to_dolist.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/tarefasNaoFeitasFragment"
+        android:id="@+id/nav_nao_feitas"
         android:name="br.edu.infnet.to_dolist.fragments.TarefasNaoFeitasFragment"
         android:label="fragment_tarefas_nao_feitas"
         tools:layout="@layout/fragment_tarefas_nao_feitas" />
     <fragment
-        android:id="@+id/tarefasFeitasFragment"
+        android:id="@+id/nav_feitas"
         android:name="br.edu.infnet.to_dolist.fragments.TarefasFeitasFragment"
         android:label="fragment_tarefas_feitas"
         tools:layout="@layout/fragment_tarefas_feitas" />
     <fragment
-        android:id="@+id/compartilharFragment"
+        android:id="@+id/nav_compartilhar"
         android:name="br.edu.infnet.to_dolist.fragments.CompartilharFragment"
         android:label="fragment_compartilhar"
         tools:layout="@layout/fragment_compartilhar" />

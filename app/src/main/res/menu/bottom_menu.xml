@@ -7,13 +7,13 @@
         android:title="Tarefas" />
 
     <item
-        android:id="@+id/nav_feitas"
-        android:icon="@drawable/ic_feitas"
+        android:id="@+id/nav_nao_feitas"
+        android:icon="@drawable/ic_nao_feitas"
         android:title="Não feitas" />
 
     <item
-        android:id="@+id/nav_nao_feitas"
-        android:icon="@drawable/ic_nao_feitas"
+        android:id="@+id/nav_feitas"
+        android:icon="@drawable/ic_feitas"
         android:title="Feitas" />
 
     <item
