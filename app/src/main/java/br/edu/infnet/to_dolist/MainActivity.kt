@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         // vinculando o appBar com o navHost
         setupActionBarWithNavController(navController, appBarConfiguration)
         findViewById<BottomNavigationView>(R.id.nav_view)?.setupWithNavController(navController)
+
     }
 
 }
