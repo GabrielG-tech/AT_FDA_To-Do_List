@@ -2,4 +2,8 @@
     <string name="app_name">To-Do List</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="compartilhe_suas_tarefas">Compartilhe suas tarefas</string>
+    <string name="todas_tarefas">Todas tarefas</string>
+    <string name="tarefas_feitas">Tarefas Feitas</string>
+    <string name="tarefas_n_o_feitas">Tarefas não feitas</string>
 </resources>

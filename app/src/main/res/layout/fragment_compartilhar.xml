@@ -6,48 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".fragments.CompartilharFragment">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Compartilhe suas tarefas"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:layout_margin="16dp"/>
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btn_todas_tarefas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_margin="16dp"
-            android:text="Todas tarefas" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/compartilhe_suas_tarefas"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-
-        <Button
-            android:id="@+id/btn_feitas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_margin="16dp"
-            android:text="Tarefas Feitas" />
+            <Button
+                android:id="@+id/btn_todas_tarefas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/todas_tarefas"
+                android:textSize="24sp" />
 
 
-        <Button
-            android:id="@+id/btn_nao_feitas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:layout_margin="16dp"
-            android:text="Tarefas não feitas" />
+            <Button
+                android:id="@+id/btn_feitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/tarefas_feitas"
+                android:textSize="24sp" />
 
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_nao_feitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@string/tarefas_n_o_feitas"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>
