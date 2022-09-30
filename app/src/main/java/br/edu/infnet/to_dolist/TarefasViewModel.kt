@@ -9,9 +9,14 @@ class TarefasViewModel: ViewModel() {
 
     val listaTarefasInicial: List<Tarefa> = listOf(
         Tarefa("Fazer TP03 - FDA", true),
-        Tarefa("Fazer AT - FDA", false),
+        Tarefa("Fazer AT - FDA", true),
         Tarefa("Fazer TP03 - DIA", true),
-        Tarefa("Fazer intent implícita para compartilhar tarefas", false)
+        Tarefa("Fazer intent implícita para compartilhar tarefas", true),
+        Tarefa("Fazer compras", false),
+        Tarefa("Ficar rico vendendo app", false),
+        Tarefa("Conseguir um estagio", false),
+        Tarefa("Por um texto bem grande para ver como a tarefa se comportara na tela do celular do usuario que visualizara o aplicativo", true)
+
         )
 
     private val _listaTarefas = MutableLiveData<List<Tarefa>>(
