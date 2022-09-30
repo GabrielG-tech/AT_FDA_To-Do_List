@@ -10,7 +10,8 @@ class TarefasViewModel: ViewModel() {
     val listaTarefasInicial: List<Tarefa> = listOf(
         Tarefa("Fazer TP03 - FDA", true),
         Tarefa("Fazer AT - FDA", false),
-        Tarefa("Fazer TP03 - DIA", false)
+        Tarefa("Fazer TP03 - DIA", true),
+        Tarefa("Fazer intent implícita para compartilhar tarefas", false)
         )
 
     private val _listaTarefas = MutableLiveData<List<Tarefa>>(
@@ -18,6 +19,9 @@ class TarefasViewModel: ViewModel() {
 
     val listaTarefa: LiveData<List<Tarefa>> = _listaTarefas
 
+    fun getListaCompleta(): List<Tarefa> {
+        return listaTarefa.value!!
+    }
 
     fun getListaFeitas(): List<Tarefa> {
         return listaTarefa.value!!.filter {
@@ -41,10 +45,14 @@ class TarefasViewModel: ViewModel() {
     }
 
 
+    fun isChecked(value: Boolean) : String {
+        return if (value) "Feito" else "Não feito"
+    }
+
     fun listaParaTexto(lista: List<Tarefa>) : String {
         var texto = ""
         lista.forEach {
-            texto+= "${it.nomeTarefa} - ${it.check}\n"
+            texto+= "${it.nomeTarefa} - ${isChecked(it.check)}\n"
         }
         return texto
     }

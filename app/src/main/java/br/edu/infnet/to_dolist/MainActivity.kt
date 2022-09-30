@@ -1,7 +1,9 @@
 package br.edu.infnet.to_dolist
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -15,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
+    val viewModel: TarefasViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -22,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         appBarConfig()
+        setupObservers()
 
     }
 
@@ -41,6 +46,27 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         findViewById<BottomNavigationView>(R.id.nav_view)?.setupWithNavController(navController)
 
+    }
+
+    private fun setupObservers() {
+        viewModel.tarefaCompartilhada.observe(this){
+            if (!it.isNullOrBlank()){
+                enviarTexto(it)
+                viewModel.setTarefaCompartilhada("")
+            }
+        }
+    }
+
+    // Enviar texto para alguém
+    private fun enviarTexto(textMessage : String) {
+        val sendIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, textMessage)
+            type = "text/plain"
+        }
+        if (sendIntent.resolveActivity(packageManager) != null) {
+            startActivity(sendIntent)
+        }
     }
 
 

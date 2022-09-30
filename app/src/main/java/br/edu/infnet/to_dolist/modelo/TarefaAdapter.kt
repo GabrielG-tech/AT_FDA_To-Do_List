@@ -1,10 +1,14 @@
 package br.edu.infnet.to_dolist.modelo
 
+import android.annotation.SuppressLint
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import br.edu.infnet.to_dolist.R
 import br.edu.infnet.to_dolist.databinding.TarefaListItemBinding
 
 class TarefaAdapter : ListAdapter<
@@ -20,7 +24,10 @@ class TarefaAdapter : ListAdapter<
             binding.tvNomeTarefa.text = item.nomeTarefa
             if (item.check == true) {
                 binding.tvCheckbox.text = "Feito"
-                // binding.tvCheckbox.setBackgroundColor(008800) = "#008800"  mudar cor fundo
+                binding.tvCheckbox.setBackgroundColor(Color.parseColor("#008800"))
+            } else {
+                binding.tvCheckbox.text = "Não feito"
+                binding.tvCheckbox.setBackgroundColor(Color.parseColor("#880000"))
             }
         }
 
